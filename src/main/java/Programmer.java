@@ -5,6 +5,6 @@ public class Programmer extends Employee {
 
     @Override
     public void work() {
-        System.out.println("I am " + this.name + ", I am programming");
+        System.out.printf("I am %s, I am writing code\n", this.name);
     }
 }

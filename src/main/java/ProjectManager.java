@@ -5,6 +5,6 @@ public class ProjectManager extends Employee {
 
     @Override
     public void work() {
-        System.out.println("I am Mr. " + this.name + ", I am earning money");
+        System.out.printf("I am Mr. %s, I am earning money\n", this.name);
     }
 }
