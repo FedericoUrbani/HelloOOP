@@ -11,10 +11,21 @@ public abstract class Employee {
     }
 
     public void goToWork() {
+        if(isAtWork) {
+            return;
+        }
+        CompanyState state = CompanyState.getInstance();
+        state.setEmployeesAtWork(state.getEmployeesAtWork() + 1);
         this.isAtWork = true;
     }
 
     public void goHome() {
+        if(!isAtWork) {
+            return;
+        }
+        CompanyState state = CompanyState.getInstance();
+        state.setEmployeesAtWork(state.getEmployeesAtWork() - 1);
+
         this.isAtWork = false;
     }
 

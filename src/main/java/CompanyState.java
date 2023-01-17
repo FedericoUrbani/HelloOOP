@@ -4,7 +4,16 @@ public class CompanyState {
 	private CompanyState(){
 		this.employeesAtWork=0;
 	}
-	public CompanyState getInstance(){
+	public static CompanyState getInstance(){
 		return instance;
+	}
+
+	public void setEmployeesAtWork(int employeesAtWork) {
+		this.employeesAtWork = employeesAtWork;
+
+	}
+
+	public int getEmployeesAtWork() {
+		return employeesAtWork;
 	}
 }
