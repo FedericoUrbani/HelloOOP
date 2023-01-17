@@ -5,6 +5,9 @@ public class ProjectManager extends Employee {
 
     @Override
     public void work() {
-        System.out.printf("I am Mr. %s, I am earning money\n", this.name);
+        if(this.isAtWork)
+            System.out.printf("I am Mr. %s, I am earning money\n", this.name);
+        else
+            System.out.printf("I am Mr. %s, I am at home and I will not work now\n", this.name);
     }
 }

@@ -1,12 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Programmer marioTheProgrammer = new Programmer("Mario", 2);
-        Programmer ginoTheProgrammer = new Programmer("Gino", 5);
+        Employee[] employees = {
+                new Programmer("Mario", 2),
+                new Programmer("Gino", 5),
+                new Programmer("Tommaso", 1),
+                new ProjectManager("Franco", 10)
+        };
 
-        ProjectManager francoTheManager = new ProjectManager("Franco", 10);
+        companyAtWork(employees);
+    }
 
-        marioTheProgrammer.work();
-        ginoTheProgrammer.work();
-        francoTheManager.work();
+    private static void companyAtWork(Employee[] employees) {
+        for(Employee employee : employees) {
+            employee.goToWork();
+            employee.work();
+            employee.goHome();
+        }
     }
 }
