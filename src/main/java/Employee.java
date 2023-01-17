@@ -18,5 +18,5 @@ public abstract class Employee {
         this.isAtWork = false;
     }
 
-    public abstract void work();
+    public abstract void work() throws Exception;
 }
