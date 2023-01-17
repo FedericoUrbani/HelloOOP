@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Employee[] employees = {
+                new SoftwareEngineer("MArco",3),
                 new ProjectManager("Franco", 10),
                 new Programmer("Mario", 2),
                 new Programmer("Gino", 5),
