@@ -1,5 +1,5 @@
-public class ProjectManager extends Employee {
-    public ProjectManager(String name, int yearsOfExperience) {
+public class Manager extends Employee {
+    public Manager(String name, int yearsOfExperience) {
         super(name, yearsOfExperience);
     }
 
