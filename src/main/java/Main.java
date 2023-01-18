@@ -13,6 +13,9 @@ public class Main {
             forceCompanyAtWork(employees);
         else
             companyAtWork(employees);
+
+
+        System.out.println("Employees at work "+CompanyState.getInstance().getEmployeesAtWork());
     }
 
     public static void companyAtWork(Employee[] employees) {
