@@ -8,27 +8,31 @@ public class Main {
                 new Programmer("Tommaso", 1)
         };
 
-        forceCompanyAtWork(employees);
+        boolean force = args.length > 0 && args[0].equals("force");
+        if(force)
+            forceCompanyAtWork(employees);
+        else
+            companyAtWork(employees);
     }
 
-    private static void companyAtWork(Employee[] employees) {
+    public static void companyAtWork(Employee[] employees) {
         for(Employee employee : employees) {
             employee.goToWork();
             try {
                 employee.work();
             } catch(Exception e) {
-                System.err.println(e);
+                System.err.println(e.getMessage());
             }
             employee.goHome();
         }
     }
 
-    private static void forceCompanyAtWork(Employee[] employees) {
+    public static void forceCompanyAtWork(Employee[] employees) {
         for(Employee employee : employees) {
             try {
                 employee.work();
             } catch(Exception e) {
-                System.err.println(e);
+                System.err.println(e.getMessage());
             }
         }
     }
